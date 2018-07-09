@@ -1,0 +1,38 @@
+{
+  "name": "dmusic-theory-classes",
+  "version": "0.9.0",
+  "description": "dmusic-theory 的 class 包装",
+  "dependencies": {
+    "dmusic-theory": "*"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/bundles/dmusic-theory-classes.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "node scripts/clean.js",
+    "doc": "node_modules/typedoc/bin/typedoc --out doc/ src/ --theme minimal --mode modules",
+    "pretty": "prettier --write",
+    "test": "mocha test/index --reporter spec --bail --check-leaks",
+    "precommit": "lint-staged && yarn test"
+  },
+  "lint-staged": {
+    "*.{ts,js,json,md}": [
+      "yarn run pretty",
+      "git add"
+    ]
+  },
+  "author": "dawenci@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "^5.0.0",
+    "klaw-sync": "^3.0.2",
+    "rollup": "^0.55.1",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-typescript2": "^0.10.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.6.2",
+    "uglify-js": "^3.3.9"
+  }
+}

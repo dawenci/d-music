@@ -1,0 +1,36 @@
+{
+  "printWidth": 120,
+  "parser": "babylon",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false,
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": [
+        "*.json",
+        ".tslintrc",
+        ".prettierrc"
+      ],
+      "options": {
+        "parser": "json",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.{css,sass,scss,less}",
+      "options": {
+        "parser": "postcss",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}
